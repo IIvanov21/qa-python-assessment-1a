@@ -94,9 +94,9 @@ def three(arg1):
     word=""
     if arg1 % 3==0:
         word="fizz"
-    elif arg1% 5==0:
+    if arg1 % 5==0:
         word=f'{word}buzz'
-    else: 
+    if arg1 % 3!=0 and arg1 % 5!=0:
         word="null"
 
     return word
@@ -123,8 +123,15 @@ def three(arg1):
     # help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
-    pass
-
+    numbers=arg1.split()
+    numsSorted=[]
+    temp=0
+    for i in numbers:
+        for j in i:
+            temp+=int(j)
+        numsSorted.append(temp)
+        temp=0
+    return sorted(numsSorted)[-1]
 
     # <QUESTION 5>
 
