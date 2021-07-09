@@ -187,10 +187,12 @@ five("Jeff,random.py,False,1445")
     # Step through the logic here in order to solve the problem, you may find help(range) helpful.
 
 def six(input):
-    if 'cei' in input: return True
-    elif 'ie' in input: return True
-    else: return False
-
+    for i in range(len(input)):
+        if input[i]== 'c' and input[i+1]=='e':return True
+        if input[i]== 'c' and input[i+1]=='i':return False
+        if input[i]== 'e' and input[i+1]== 'i':return False
+        if input[i]== 'i' and input[i+1]== 'e':return True
+    return False
 
 
     # <QUESTION 7>
