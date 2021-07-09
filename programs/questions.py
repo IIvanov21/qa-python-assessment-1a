@@ -35,7 +35,12 @@
     # What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-    pass
+    if len(input1)>len(input2):
+        return input1
+    elif len(input1)<len(input2):
+        return input2
+    else:
+        return f'{input1} {input2}' 
 
 
     # <QUESTION 2>
@@ -61,9 +66,11 @@ def one(input1, input2):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
-    pass
+    section=input.split('bert')
+    section=input.split('beRT')
+    return section
 
-
+print(two("bertclivebert"))
     # <QUESTION 3>
 
     # given a number
@@ -84,9 +91,15 @@ def two(input):
     # No Hints for this question
 
 def three(arg1):
-    pass
+    word=""
+    if arg1 % 3==0:
+        word="fizz"
+    elif arg1% 5==0:
+        word=f'{word}buzz'
+    else: 
+        word="null"
 
-
+    return word
     # <QUESTION 4>
 
     # Given a string seperate the string into the individual numbers present, then add each digit of each number to get a final value for each number
