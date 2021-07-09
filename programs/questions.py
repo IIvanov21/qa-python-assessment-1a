@@ -66,10 +66,16 @@ def one(input1, input2):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
-    section=input.split('bert')
-    section=input.split('beRT')
-    return section
-
+    input=input.lower()
+    section=input.split("bert")
+    if len(section[1])>2:
+        return section[1]
+    else: return ""
+print (two("bertclivebert"))
+print(two("xxbertfridgebertyy"))
+print(two("xxBertfridgebERtyy"))
+print(two("xxbertyy"))
+print(two("xxbeRTyy"))
     # <QUESTION 3>
 
     # given a number
@@ -254,6 +260,7 @@ def eight(input):
 def nine(inputString, char):
     if char not in inputString: return -1
     index=0
+    inputString=inputString.strip()
     char2=char.upper()
     for i in range(0,len(inputString)):
         if inputString[i] == char:
