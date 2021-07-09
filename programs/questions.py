@@ -225,7 +225,6 @@ def seven(input):
     # You may need to create a list of numbers from 0 to i, take a look at help(range).
 from functools import reduce
 def eight(input):
-   
     num=0
     numbers=[]
     for i in range(1,input+1):
@@ -233,7 +232,7 @@ def eight(input):
     num=reduce(lambda x, y: x*y, numbers)
     return num
 
-eight(6)
+
     # <QUESTION 9>
 
     # Given a string and a char, returns the position in the String where the char first appears.
@@ -253,9 +252,17 @@ eight(6)
     # Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-    pass
-
-
+    if char not in inputString: return -1
+    index=0
+    char2=char.upper()
+    for i in range(0,len(inputString)):
+        if inputString[i] == char:
+            index=i+1
+            break
+        elif inputString[i] == char2:
+            index=i+1
+            break
+    return index
     # <QUESTION 10>
 
     # Given a string, int and a char, return a boolean value if the 'nth' 
@@ -274,4 +281,10 @@ def nine(inputString, char):
     # How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
 
 def ten(string, int, char):
-    pass
+    index=0
+    for i in range(len(string)):
+        if char==string[i].lower():
+            index=i+1
+    if index==int: return True
+    else: return False
+
