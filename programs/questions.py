@@ -70,7 +70,6 @@ def two(input):
     section=input.split('beRT')
     return section
 
-print(two("bertclivebert"))
     # <QUESTION 3>
 
     # given a number
@@ -159,8 +158,10 @@ def four(arg1):
     # help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-    pass
+    sorted(input)
+    print(input)
 
+five("Jeff,random.py,False,1445")
 
     # <QUESTION 6>
 
@@ -180,7 +181,10 @@ def five(input):
     # Step through the logic here in order to solve the problem, you may find help(range) helpful.
 
 def six(input):
-    pass
+    if 'cei' in input: return True
+    elif 'ie' in input: return True
+    else: return False
+
 
 
     # <QUESTION 7>
@@ -198,9 +202,13 @@ def six(input):
     # How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    pass
-
-
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    numOfVowels=0
+    for i in input:
+        for j in vowels:
+            if i==j:
+                numOfVowels+=1
+    return numOfVowels
     # <QUESTION 8>
 
     # Write a function which takes an input (between 1 and 10 inclusive) and multiplies it by all the numbers before it.
