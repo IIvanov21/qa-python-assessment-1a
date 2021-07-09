@@ -223,11 +223,17 @@ def seven(input):
     # <HINT>
 
     # You may need to create a list of numbers from 0 to i, take a look at help(range).
-
+from functools import reduce
 def eight(input):
-    pass
+   
+    num=0
+    numbers=[]
+    for i in range(1,input+1):
+        numbers.append(i)
+    num=reduce(lambda x, y: x*y, numbers)
+    return num
 
-
+eight(6)
     # <QUESTION 9>
 
     # Given a string and a char, returns the position in the String where the char first appears.
