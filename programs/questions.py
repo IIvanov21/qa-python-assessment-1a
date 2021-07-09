@@ -262,16 +262,20 @@ def eight(input):
 def nine(inputString, char):
     if char not in inputString: return -1
     index=0
-    inputString=inputString.strip()
+    temp=inputString.replace(" ","")
+    print(temp)
     char2=char.upper()
-    for i in range(0,len(inputString)):
-        if inputString[i] == char:
+    for i in range(0,len(temp)):
+        if temp[i] == char:
             index=i+1
-            break
-        elif inputString[i] == char2:
+            return index
+        elif temp[i] == char2:
             index=i+1
-            break
+            return index
+
     return index
+
+nine("This is a Sentence","S")
     # <QUESTION 10>
 
     # Given a string, int and a char, return a boolean value if the 'nth' 
